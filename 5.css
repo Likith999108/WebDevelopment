@@ -1,0 +1,118 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Flexbox */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#003366;
+    color:white;
+    padding:15px 30px;
+}
+
+/* Heading Animation */
+.title{
+    animation:slideIn 2s ease;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:color 0.5s ease;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+/* Grid */
+.courses{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    padding:30px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    text-align:center;
+    border-radius:8px;
+    box-shadow:0 2px 5px gray;
+    transition:transform 0.5s ease;
+    animation:fadeIn 2s ease;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+button{
+    margin-top:10px;
+    padding:8px 15px;
+    background:#003366;
+    color:white;
+    border:none;
+    transition:0.4s;
+}
+
+button:hover{
+    background:#0055aa;
+}
+
+/* Course Icon Animation */
+.icon{
+    animation:bounce 1.5s infinite;
+}
+
+/* Media Queries */
+@media(max-width:768px){
+    .courses{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:480px){
+    .header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    nav{
+        flex-direction:column;
+    }
+
+    .courses{
+        grid-template-columns:1fr;
+    }
+}
+
+/* Animations */
+@keyframes slideIn{
+    from{opacity:0; transform:translateX(-100px);}
+    to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
