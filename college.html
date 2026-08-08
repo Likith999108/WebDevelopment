@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>College Website</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+}
+
+header{
+    background:navy;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+nav ul{
+    list-style:none;
+    padding:0;
+}
+
+nav > ul > li{
+    display:inline;
+    margin:15px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+/* Descendant Selector */
+.course p{
+    color:blue;
+}
+
+/* Child Selector */
+.student > h2{
+    color:green;
+}
+
+/* Adjacent Sibling Selector */
+h2 + p{
+    font-style:italic;
+}
+
+/* General Sibling Selector */
+h2 ~ ul{
+    color:red;
+}
+
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>ABC College</h1>
+
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Courses</a></li>
+<li><a href="#">Students</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="course">
+<h2>Courses</h2>
+<p>B.Tech, B.Sc, B.Com, MBA</p>
+<ul>
+<li>Computer Science</li>
+<li>Electronics</li>
+</ul>
+</section>
+
+<section class="student">
+<h2>Students</h2>
+<p>Students participate in academics and sports.</p>
+<ul>
+<li>Sports Club</li>
+<li>Cultural Club</li>
+</ul>
+</section>
+
+<footer>
+<p>&copy; 2026 ABC College</p>
+</footer>
+
+</body>
+</html>

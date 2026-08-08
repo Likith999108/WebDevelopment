@@ -1,0 +1,5 @@
+[target]{color:red;}
+input[type="text"]{background:lightyellow;}
+a[href^="https"]{font-weight:bold;}
+input[type$="mail"]{border:2px solid green;}
+a[href*="github"]{background:lightblue;}
